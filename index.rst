@@ -214,8 +214,8 @@ Usability
    whether the LSST stack is intended as a user-level product. It is fair
    to say that while this is a goal that has been both publicly promised
    and that is dear to the heart of DM developers (not to mention of
-   great service to the astronomical community), we have failed to quality
-   the architectural and resource implications of such a commitment. We
+   great service to the astronomical community), we have failed to qualify 
+   (never mind quantify) the architectural and resource implications of such a commitment. We
    would like to see some clearly stated requirements in this
    area. LDM-151 could be the relevant document.
 
