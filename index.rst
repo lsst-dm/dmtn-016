@@ -83,12 +83,16 @@ An evolving roadmap
 
 Our technical roadmap involves an expanding capability based based on
 previously released components with a common thread through all of
-SQuaRE's deliverables:
+SQuaRE's deliverables, from simple CI functionality to a full-featured
+L3-type capability that allows execution of ad-hoc code on data:
 
 .. image:: _static/roadmap.png
    :alt: SQuaRE Technical Roadmap
 
-See :ref:`appendix_a` for the motivation to this approach. 
+See :ref:`appendix_a` for the full motivation to this approach. It is
+important to note that the evolution left to right is cumulative; the
+previous functionality still exists, but the capabilities of the
+system are expanded.
 		 
 
 Current Iteration
