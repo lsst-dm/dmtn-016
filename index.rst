@@ -126,7 +126,7 @@ elements in common with our documentation infrastructure (`sqr-006
 
 For the database, we re-used (and are proposing some changes) to the
 SDQA tables in the LSST Database Schema (`sqr-008
-<https://sqr-008.lsst.io>`_ and we are prototyping using metrics
+<https://sqr-008.lsst.io>`_) and we are prototyping using metrics
 developed for KPM calculation, validate_drp (`dmtn-008
 <http://dmtn-008.lsst.io>`_).
 
@@ -267,8 +267,8 @@ good code, such as:
 
 We also became concerned about the agility of the codebase, in
 particular in minimising the cost of change. Our experience is that
-science data quality does not end upon the discovery of a problem but
-rather, at the deployment of a solution. 
+science data quality does not end upon the discovery of a problem, but
+rather at the deployment of a solution. 
 
 We therefore sought and obtained the developer support WBS. However we
 did not increase our resources to cover these activities, for reasons
