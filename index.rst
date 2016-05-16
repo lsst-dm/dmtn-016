@@ -95,6 +95,8 @@ important to note that the evolution left to right is cumulative; the
 previous functionality still exists, but the capabilities of the
 system are expanded.
 
+(The light bulb symbols indicate progression as of end of X16). 
+
 Current Iteration
 =================
 
