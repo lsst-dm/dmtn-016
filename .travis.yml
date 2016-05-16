@@ -1,8 +1,21 @@
 sudo: false
 language: python
-python:
-      - 3.4
-install: "pip install -r requirements.txt"
-script: "make html"
-notifications:
-      email: false
+matrix:
+  include:
+    - python: "3.5"
+      env: LTD_MASON_BUILD=true
+install:
+  - pip install -r requirements.txt
+  - pip install "ltd-mason>=0.2,<0.3"
+script:
+  - sphinx-build -b html -a -n -W -d _build/doctree . _build/html
+after_success:
+  - ltd-mason-travis --html-dir _build/html
+env:
+  global:
+    - LTD_MASON_BUILD=false  # disable builds in regular text matrix
+    - LTD_MASON_PRODUCT="dmtn-016"
+    # travis encrypt "LTD_MASON_AWS_ID=... LTD_MASON_AWS_SECRET=..." --add env.global 
+    - secure: "n2NsJT2Kw/SsISIWbxJmnz+u2B7yafeAle4cag95Tu/iZYI5VRzY9oQr7bF3s/0o+YMnOaDdgm0r42H4NnTftfAvU4XnCth3FXDy4G7hoNb+KSPtGLjMAE8ZHF+iBT4uLHbk2sdyzHDO4MhsHXAfOy1DBaiU5+e4+x1IfVG3ycWMJdtrB7wxdhGcA5uc2scJLjKJu8wlaoeGTat6rTRJonxUsNThMKNm8Jy7TKIgjin92gw6XYsjqHcNSAfRiMzgMtKaRf4ZpfiZdm1cs5p6qF0OKc2YoFtFsNbnu4gnDR5urznVi9PfOn9XHN8KRT4CdS4BxJg5ybUwXKQsbpB6G15Kf/vZGYO1yiEkr1Dz+UYX3Ecjh5asa3pNK8CeGNjO5F8JNEFDliJPuofmmDs09utSh47wug1cLwZTZjAaNEtOY83/RKFU8qJpmrknkf+lzpPLSl1VV6wVuYhs7YHHz8sSrm8Wz6ixuQe+t5l9OQJdWePkmZEfj+hIz3fQi/n6HjTpPeJ0SfGp95rMKR8wahh/3+/Ulv0wo4cgdGf/GI7DcADRVlRl32pisNK/08gkN2l1kM6FSyuEnWQ24bI9DG4x7cBnmrSqvwigdQGR3WMP72rKFOWdJiFgtAe6j1vodsYILXSt3C6Y3lj+Hj80ag+hH86dt+tTzlbb3bULpa4="
+    # travis encrypt "LTD_KEEPER_URL=... LTD_KEEPER_USER=... LTD_KEEPER_PASSWORD=..." --add env.global 
+    - secure: "PD7rk0BMd1g119wBGpIrxtZobSF+23SlyYPjohPsEs14KHGW7ACjZnM8Un80UEF95s+BigyyKLDuEv9t5bO2G0NoPWkwrZe969SuPjgQScA2Ucv3oWuSyNbn5QCEH6oQ+c/U++7rrIWB3Ppd36vKalD5UgS1mBWYWZCDRoS0n9+sE5Pysl5M5spHBaxvqOlMBOGPoYrnseWH8VEc63fDXYB0gjpmrLr4oL3QwTCgkk5Z6IMBx87ip4AH7aLlcO1Kp0IyL1r0MMIN+N+PDx3XxvVCpOpcKBfCaKhUci5Fijd3wjCPQxE1WaKBRFd2K69QWta1rSOh9yO61QiEqryYTBVkgV4CSAxKw1c0uSehGT0N6CAYwxVWVN0sEQXDKeMRJe4xQB3pwL7RlkY1xrfj+jNcppRH/dgOZy4hQULV8sntKtQnJ1Nq8DpItioYNYUtUFZrt8jH7PDfiN955kf9JjRozQJWM+PsQSrBi7EXQVjA/2jQoFa4lfKpka2DDwjSuzZcUiHv+UUn59QSEOQuLwcNdUDeOR8hUnNr7jPPloesKy4uvqGXzrW/d/MuRAXGsJ02bE8BpS2/xTqoUMMEfU0I1eDDmLxYkQc6ytJWPO074GT+77mY+R81vvnE5Px/I5l7Xw3mJbzbXd7uZdZKQcJqtiyZLvMovjaY2HgQ9AI="
