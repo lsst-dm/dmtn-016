@@ -21,7 +21,7 @@ WG in its rework of LDM-151. It is incomplete, unreviewed and
 certainly not baselined. 
 
 Controlling documents
--------------------
+----------------------
 
 There are three main documents that reference the QA system:
 
@@ -37,8 +37,9 @@ There are three main documents that reference the QA system:
   and implementation. 
   
 - LDM-230 has two brief references to the QA system that
-architecturally unclear as to scope and to which system falls their
-implementation. 
+  architecturally unclear as to scope and to which system falls their
+  implementation.
+
 
 All three would require some level of change to be consistent with the
 approach described in this document, a new requirements flow-down,
@@ -230,14 +231,13 @@ The particular area of activity for the AURA/LSST (aka Tucson) team
 was Science QA, and the WBS structure at the beginning of LSST
 construction was as follows:
 
-|--------------+-----------------------------------------------+------|
-| 02C.01.02    | Science Data Quality Integration and Test	 | LSST |
-|--------------+-----------------------------------------------+------|
-| 02C.01.02.01 | SDQA Pipeline                                 | LSST |
-| 02C.01.02.02 | SDQA Toolkit	                              | LSST |
-| 02C.01.02.03 | L3 Toolkit	                                | LSST |
-|--------------+-----------------------------------------------+------|
-
+============  ===========================================
+02C.01.02     Science Data Quality Integration and Test 
+============  ===========================================
+02C.01.02.01  SDQA Pipeline 
+02C.01.02.02  SDQA Toolkit
+02C.01.02.03  L3 Toolkit
+============  ===========================================
 
 (prior to Construction start, Calibration Products was also included,
 but later was moved to Princeton's WBS). 
@@ -281,7 +281,7 @@ software developments we could develop a single technical roadmap that
 expands, in an on-going fashion, a set of capabilities that can be
 applied to all of our areas of acitivity: developer support, QA
 assessment, commissioning/intergration support, and even
-functionality consistent with Level 3 goals[#level3]_. As a result,
+functionality consistent with Level 3 goals[*]_. As a result,
 we intended for the effort in many areas of "developer support" to be
 recouped further into construction by being re-used in the QA and L3
 context. This document outlines a technical roadmap designed to do
@@ -296,7 +296,7 @@ does not affect the goals or capabilities of the system.
 
 
 The SQuaRE "origin story"
------------------------
+--------------------------
 
 This approach to supporting software quality as a way of ensuring
 product quality, with a focus on a devops engineering approach that
@@ -313,6 +313,6 @@ deliverables).
 
 .. rubric:: Footnotes
 
-.. [#level3] There is some difference of opinion as to what Level 3
-"really means" at this point, 
+.. [*] There is some difference of opinion as to what Level 3
+			 "really means" at this point, see later discussion
 
