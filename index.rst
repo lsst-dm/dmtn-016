@@ -114,21 +114,27 @@ an intelligent work-flow system at scale).
 
 This work was aided by our previous iteration, the CI system
 design. It uses tooling we developed to, for example, deploy
-stack-ready instances for executing stack code. It also uses the log
-monitoring system (codename: panopticon) which is also going to be
-used for CI, and the UI (at this iteration a dashboard, later also the
-SUI) has elements in common with our documentation infrastructure.
+stack-ready instances for executing stack code
+(`sqr-002 <https://sqr-002.lsst.io>`_). It also uses the log monitoring system
+(codename: panopticon - sqr-007 in preparation) which is also going to
+be used for CI, and the UI (at this iteration a dashboard - see
+`sqr-009 <http://sqr-009.lsst.io/>`_ ), later also the SUI) has
+elements in common with our documentation infrastructure (`sqr-006
+<https://sqr-006.lsst.io>`_).
 
 For the database, we re-used (and are proposing some changes) to the
-SDQA tables in the LSST Database Schema and we are prototyping using
-metrics developed for KPM calculation, validate_drp.
+SDQA tables in the LSST Database Schema (`sqr-008
+<https://sqr-008.lsst.io>`_ and we are prototyping using metrics
+developed for KPM calculation, validate_drp (`dmtn-008
+<http://dmtn-008.lsst.io>`_).
 
-The initial production version will support simple data processing runs
-on static data sets in order to publish a "QA CI" service to
-developers that detects regressions in the codebase and will use
-primarily HSC data since the stack is well-supported for that
-instrument and we have shared developers that will benefit from our
-QA functionality. 
+The initial production version will support simple data processing
+runs on static data sets (which motivated our Git-LFS service, see
+`sqr-001 <http://sqr-001.lsst.io/>`_) in order to publish a "QA CI"
+service to developers that detects regressions in the codebase and
+will use primarily HSC data since the stack is well-supported for that
+instrument and we have shared developers that will benefit from our QA
+functionality.
 
 .. _more_info:
 
