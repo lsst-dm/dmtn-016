@@ -22,7 +22,7 @@ document will be updated to remove those sections.
    certainly not baselined. 
 
 Controlling documents
----------------------
+=====================
 
 There are three main documents that reference the QA system:
 
@@ -47,7 +47,7 @@ re-plan, etc. See :ref:`more_info` for a list of areas particularly
 benefiting from updating.
 
 Design Principles
------------------
+=================
 
 In our approach, we have been driven by the following principles:
 
@@ -79,7 +79,7 @@ In our approach, we have been driven by the following principles:
   
 
 An evolving roadmap
--------------------
+===================
 
 Our technical roadmap involves an expanding capability based based on
 previously released components with a common thread through all of
@@ -96,7 +96,7 @@ previous functionality still exists, but the capabilities of the
 system are expanded.
 
 Current Iteration
------------------
+=================
 
 At the current design iteration, we are working towards our SQuaSH
 architecture strawman:
@@ -133,7 +133,7 @@ QA functionality.
 .. _more_info:
 
 Areas lacking definition
-------------------------
+========================
 
 The following areas would benefit from input from a Working Group
 (whether the current Pipelines WG or a future one) or similar
