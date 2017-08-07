@@ -1,4 +1,1 @@
-PyYAML>=3.11
-Sphinx==1.4.1
-documenteer>=0.1.1,<0.2.0
-lsst-dd-rtd-theme>=0.1.0
+documenteer[technote]>=0.2.1,<0.3
